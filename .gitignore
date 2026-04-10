@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.pdf
+*.gz
+*.toc
+*.fls
+*.bbl
+*.bcf
+*.run.xml
+*.blg
+article-blx.bib
+__pycache__

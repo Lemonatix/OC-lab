@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[german]{authblk}
+\author[1]{Mika Riesterer}
+
+\affil[1]{Labor 1, Gruppe 5, Platz 69}
+
+\usepackage[margin=2cm,includeheadfoot]{geometry}
+
+\usepackage{parskip}
+
+\renewcommand{\topfraction}{1}
+\renewcommand{\topfraction}{1}
+
+\usepackage[german]{babel}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\headheight}{15pt}
+
+\fancyhead[L]{Stand: \today}
+\fancyhead[C]{Versuch ???}
+\fancyhead[R]{Seite \thepage}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{textcomp, gensymb}
+
+\usepackage{subfig}
+
+
+\usepackage{csquotes}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{refs.bib}
+
+\usepackage{siunitx}
+\sisetup{
+  per-mode=fraction,
+  fraction-function=\tfrac
+}
+
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{float}
+\definecolor{gray}{gray}{0.75}
+\definecolor{gray5}{gray}{0.5}
+
+\setlength{\emergencystretch}{10pt}
+
+\usepackage{caption}
+\captionsetup{format=hang,labelfont=it,textfont=it}
+
+\newcommand*{\vv}[1]{\overrightarrow{\mkern0mu#1}}
+
+\newcommand{\specialcell}[2][c]{%
+\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\begin{document}
+\pagenumbering{Roman}
+
+% Change here
+\title{%
+    ???? \\
+    \large Grundpraktikum für Anorganische und Physikalisches Chemie 1 \\
+    \large Versuchsdurchführung am ???. Februar 2025}
+
+\date{\today}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Einleitung}
+\input{introduction}
+
+\section{Experimente}
+\input{experiments}
+
+\printbibliography
+\newpage
+\appendix
+
+\input{appendix}
+
+\end{document}
