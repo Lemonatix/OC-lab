@@ -1,9 +1,11 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[version=4]{mhchem}
+\usepackage{stix2}
 
 \usepackage[german]{authblk}
-\author[1]{Mika Riesterer}
+\author[1]{Mika M. Riesterer}
 
 \affil[1]{Labor 9, Gruppe 5, Platz 45, Assistent: Xiqin Pu}
 
@@ -11,7 +13,6 @@
 
 \usepackage{parskip}
 
-\renewcommand{\topfraction}{1}
 \renewcommand{\topfraction}{1}
 
 \usepackage[german]{babel}
@@ -23,23 +24,22 @@
 \setlength{\headheight}{15pt}
 
 \fancyhead[L]{Stand: \today}
-\fancyhead[C]{Analyse 1}
+\fancyhead[C]{1,1-Dichlor-2-phenylcyclopropan}
 \fancyhead[R]{Seite \thepage}
 
 \usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{mathptmx}
 \usepackage{wasysym}
 \usepackage{graphicx}
 \usepackage{textcomp, gensymb}
 
 \usepackage{subfig}
 
-
 \usepackage{csquotes}
 \usepackage[backend=bibtex]{biblatex}
 \addbibresource{refs.bib}
+\setcounter{biburlnumpenalty}{9000} % Umbruch nach Zahlen
+\setcounter{biburlucpenalty}{9000}  % Umbruch nach Großbuchstaben
+\setcounter{biburllcpenalty}{9000}  % Umbruch nach Kleinbuchstaben
 
 \usepackage{siunitx}
 \sisetup{
@@ -47,6 +47,7 @@
   fraction-function=\tfrac
 }
 
+\usepackage[hidelinks]{hyperref}
 \usepackage{color}
 \usepackage{colortbl}
 \usepackage{float}
@@ -68,19 +69,30 @@
 
 % Change here
 \title{%
-    Präparat 1 \\
+    Präparat 2 (1,1-Dichlor-2-phenylcyclopropan) \\
+    \large Cyclopropanierung \\[0.5cm]
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.7\textwidth]{drawings/P2.pdf} \\[0.5cm]
+      \caption{Reaktiongleichung der Cyclopropanierung}
+      \label{fig:P2}
+    \end{figure}
     \large Organisch-chemisches Grundpraktikum - SoSe 2026 \\
-    \large Versuchsdurchführung am 27.04. - 05.05.2026}
+    \large Versuchsdurchführung am 05.05. - 07.05.2026}
 
 \date{\today}
 
 \maketitle
+\thispagestyle{empty}
 \newpage
 
 \pagenumbering{arabic}
 
 \section{Einleitung}
 \input{introduction}
+
+\section{Mechanismus}
+\input{mechanism}
 
 \section{Ergebnis}
 \input{results}
@@ -91,13 +103,10 @@
 \section{Experiment}
 \input{experiment}
 
+\newpage
 \section{Analytik}
 \input{analytic}
 
 \printbibliography
-\newpage
-\appendix
-
-\input{appendix}
 
 \end{document}
