@@ -35,7 +35,9 @@
 \usepackage{subfig}
 
 \usepackage{csquotes}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=bibtex, autocite=superscript]{biblatex}
+\let\oldcite\cite
+\renewcommand{\cite}[1]{\textsuperscript{\oldcite{#1}}}
 \addbibresource{refs.bib}
 \setcounter{biburlnumpenalty}{9000} % Umbruch nach Zahlen
 \setcounter{biburlucpenalty}{9000}  % Umbruch nach Großbuchstaben
@@ -78,7 +80,8 @@
       \label{fig:P1}
     \end{figure}
     \large Organisch-chemisches Grundpraktikum - SoSe 2026 \\
-    \large Versuchsdurchführung am 27.04. - 05.05.2026}
+    \large Versuchsdurchführung am 27.04. - 05.05.2026 \\
+    \small (überarbeitete Version)}
 
 \date{\today}
 
