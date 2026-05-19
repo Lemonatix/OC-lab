@@ -35,7 +35,9 @@
 \usepackage{subfig}
 
 \usepackage{csquotes}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[backend=bibtex, autocite=superscript]{biblatex}
+\let\oldcite\cite
+\renewcommand{\cite}[1]{\textsuperscript{\oldcite{#1}}}
 \addbibresource{refs.bib}
 \setcounter{biburlnumpenalty}{9000} % Umbruch nach Zahlen
 \setcounter{biburlucpenalty}{9000}  % Umbruch nach Großbuchstaben
